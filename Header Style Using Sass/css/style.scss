@@ -1,0 +1,72 @@
+$primary : #4c5d78;
+$secondary: #bdbdbd;
+$other : white; 
+
+$font : Arial;
+
+
+@mixin setmargin($top, $left, $bottom, $right){
+    margin: $top+px $left+px  $bottom+px  $right+px;
+}
+
+@mixin setpadding($top, $left, $bottom, $right){
+    padding: $top+px $left+px  $bottom+px  $right+px;
+}
+
+@mixin alignment($value){
+    text-align: $value;
+}
+
+body {
+    margin: 0; 
+}    
+
+.container{
+    @at-root{
+    .top-area{
+        background-color: $secondary;
+        @include setpadding(5, 0, 5, 0);
+        @include alignment(center);
+        font-family: $font;
+        font-size: 25px;
+    }
+
+    .main-header{
+        background-color: $primary;
+        max-width: 100%;
+        @include setpadding(20, 40, 20, 40);
+        height: 30px;
+        .header-logo{
+            width: 10%;
+            float: left;
+            h2{
+                color: $other;
+                margin: 0;
+            }
+        }
+        .header-nav{
+            width: 80%;
+            float: left;
+            ul{
+                margin: 0;
+                @include alignment(center);
+                li{
+                     display: inline-block;
+                     @include setmargin(0, 20, 0, 0);
+                    a{
+                        color: $other;
+                        text-decoration: none; 
+                    }
+                }
+            }
+        }
+
+        .header-button{
+            width: 10%;
+            float: left;
+        }
+    }
+    }
+
+
+}
