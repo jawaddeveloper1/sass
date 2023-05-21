@@ -12,7 +12,8 @@ body {
   background-color: #4c5d78;
   max-width: 100%;
   padding: 20px 40px 20px 40px;
-  height: 30px; }
+  height: 30px;
+  font-family: Arial; }
   .main-header .header-logo {
     width: 10%;
     float: left; }
@@ -21,7 +22,8 @@ body {
       margin: 0; }
   .main-header .header-nav {
     width: 80%;
-    float: left; }
+    float: left;
+    margin-top: 5px; }
     .main-header .header-nav ul {
       margin: 0;
       text-align: center; }
@@ -33,6 +35,10 @@ body {
           text-decoration: none; }
   .main-header .header-button {
     width: 10%;
-    float: left; }
+    float: left;
+    margin-top: 5px; }
+    .main-header .header-button a {
+      color: white;
+      text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */
